@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGL | Gestão de Lavagens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="user-status-bar">
+            <div class="status-info">
+                <i class="fas fa-user-circle"></i> 
+                <span id="display-usuario">---</span>
+                <span id="display-role" class="role-badge">---</span>
+            </div>
+            <button class="btn-logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+        </div>
+
+        <header>
+            <h1>SGL | Gestão de Lavagens</h1>
+            <h2>Consórcio Recife Ambiental</h2>
+            <p>Controle de Lavagens da Frota - Recife/PE</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total de Lavagens</h3>
+                <p id="total-lavagens">0</p>
+            </div>
+            <div class="card">
+                <h3>Hoje</h3>
+                <p id="lavagens-hoje">0</p>
+            </div>
+            <div class="card">
+                <h3>Líder do Dia</h3>
+                <p id="lavador-destaque">-</p>
+            </div>
+        </section>
+
+        <section id="alerta-frota" class="table-container alerta-box" style="display: none;">
+            <div class="alerta-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Atenção: Lavagem Pendente</h2>
+            </div>
+            <div id="lista-pendentes" class="pendentes-grid"></div>
+        </section>
+
+        <section class="form-container">
+            <form id="lavagem-form">
+                <div class="input-group">
+                    <label for="veiculo">Ativo (Veículo)</label>
+                    <input type="text" id="veiculo" placeholder="Ex: 125.A011" required>
+                </div>
+                <div class="input-group">
+                    <label for="responsavel">Lavador Responsável</label>
+                    <select id="responsavel" required>
+                        <option value="">Selecione...</option>
+                        <option value="Crisvaldo">Crisvaldo</option>
+                        <option value="Geraldo">Geraldo</option>
+                        <option value="Murilo">Murilo</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="data">Data do Serviço</label>
+                    <input type="date" id="data" required>
+                </div>
+                <button type="submit" id="btn-salvar">Registrar Lavagem</button>
+            </form>
+        </section>
+
+        <section class="table-container">
+            <div class="table-header">
+                <h2>Histórico Recente</h2>
+                <button id="btn-exportar" onclick="exportarExcel()" class="btn-excel">
+                    <i class="fas fa-file-excel"></i> Exportar Excel
+                </button>
+            </div>
+            <table id="tabela-lavagens">
+                <thead>
+                    <tr>
+                        <th>Veículo</th>
+                        <th>Responsável</th>
+                        <th>Data</th>
+                        <th class="admin-only">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-lavagens"></tbody>
+            </table>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <h4>SGL - Gestão de Lavagens</h4>
+                <p>&copy; 2026 Desenvolvido por Matheus Amancio<br> Recife, PE</p>
+                <div class="footer-social">
+                    <a href="https://github.com/matheusamancio06" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/matheus-amancio006/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/matheusamancioo_/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

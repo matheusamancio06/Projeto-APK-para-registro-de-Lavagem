@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso | SGL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <section class="form-container login-card">
+            <h2>SGL Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" placeholder="" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="" required>
+                </div>
+                <button type="submit" class="full-width">Acessar Sistema</button>
+                <p id="erro-login" class="error-message">Credenciais inválidas!</p>
+            </form>
+        </section>
+    </div>
+    <script src="login-script.js"></script>
+</body>
+</html>

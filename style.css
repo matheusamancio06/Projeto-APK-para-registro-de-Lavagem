@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #2ecc71;
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --border-color: #444;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+
+/* Status Bar */
+.user-status-bar { display: flex; justify-content: space-between; align-items: center; background: #111; padding: 10px 20px; border-radius: 5px; margin-bottom: 20px; }
+.role-badge { padding: 2px 8px; border-radius: 4px; text-transform: uppercase; font-size: 0.7rem; margin-left: 8px; font-weight: bold; }
+.role-admin { background: var(--primary-color); color: #1a1a1a; }
+.role-user { background: #3498db; color: white; }
+.btn-logout { background: transparent; border: 1px solid var(--danger); color: var(--danger); padding: 5px 12px; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+.btn-logout:hover { background: var(--danger); color: white; }
+
+/* Dashboard */
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+.card { background: var(--card-bg); padding: 15px; border-radius: 8px; text-align: center; border-left: 4px solid var(--primary-color); }
+.card h3 { font-size: 0.8rem; color: #aaa; margin-bottom: 5px; }
+.card p { font-size: 1.6rem; font-weight: bold; color: var(--primary-color); margin: 0; }
+
+/* Alertas */
+.alerta-box { border: 1px solid #e67e22; }
+.alerta-header { display: flex; align-items: center; gap: 10px; color: #e67e22; margin-bottom: 10px; }
+.pendentes-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.badge-pendente { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; display: flex; align-items: center; gap: 6px; }
+.status-vermelho { background: rgba(231, 76, 60, 0.15); color: var(--danger); border: 1px solid var(--danger); }
+.status-amarelo { background: rgba(241, 196, 15, 0.15); color: var(--warning); border: 1px solid var(--warning); }
+
+/* Containers */
+.form-container, .table-container { background: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+#lavagem-form { display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-end; }
+.input-group { display: flex; flex-direction: column; flex: 1; min-width: 180px; }
+label { font-size: 0.85rem; margin-bottom: 5px; color: #bbb; }
+input, select { padding: 10px; background: #333; color: white; border: 1px solid var(--border-color); border-radius: 4px; }
+button { background: var(--primary-color); color: #1a1a1a; border: none; padding: 11px 20px; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+button:hover { filter: brightness(1.1); }
+
+/* Tabela */
+.table-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
+th { color: var(--primary-color); font-size: 0.9rem; }
+.btn-delete { background: var(--danger); padding: 5px 10px; font-size: 0.75rem; color: white; }
+.btn-excel { background: #27ae60; font-size: 0.8rem; }
+
+/* Login */
+.login-body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #121212; }
+.login-card { width: 350px; text-align: center; }
+.full-width { width: 100%; margin-top: 15px; }
+.error-message { color: var(--danger); font-size: 0.8rem; margin-top: 10px; display: none; }
+
+/* Footer */
+.main-footer { margin-top: 40px; padding: 30px; text-align: center; border-top: 1px solid var(--border-color); color: #777; }
+.footer-social { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+.social-btn { width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #333; color: white; text-decoration: none; transition: 0.3s; }
+.social-btn:hover { transform: translateY(-3px); background: var(--primary-color); }
