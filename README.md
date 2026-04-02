@@ -23,7 +23,7 @@ Para este projeto, foquei em criar uma solução leve, rápida e intuitiva, util
 
 ### 🔐 Controle de Acesso (`login.html` & `login-script.js`)
 * Implementação de **Autenticação Baseada em Níveis (RBAC)**.
-* O sistema diferencia usuários entre `Admin` e `Lavador`, liberando ou restringindo funcionalidades conforme o perfil.
+* O sistema diferencia usuários entre `Admin` e `Operador`, liberando ou restringindo funcionalidades conforme o perfil.
 
 ### 📊 Interface Principal (`index.html`)
 * **Dashboard Dinâmico:** Cards de indicadores com totalizadores de lavagens e destaque do lavador do dia.
