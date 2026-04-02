@@ -2,8 +2,8 @@
 
 O **SGL** é uma aplicação web de alta performance desenvolvida para modernizar e substituir o controle manual de higienização da frota do **Consórcio Recife Ambiental**. O sistema permite o registro rápido de serviços, monitoramento de indicadores em tempo real e gestão de pendências críticas.
 
-user: admin = senha: 123 /
-user: lavador = senha: 321
+user: admin  senha: 123 /
+user: lavador  senha: 321
 
 ---
 
